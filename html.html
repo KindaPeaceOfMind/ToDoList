@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link href="css.css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <table class="table">
+        <tr class="title_row">
+            <td class="col1"><p>
+                <input id="input1" placeholder="now"></p>
+                <input id="input2" placeholder="today">
+            </td>
+            <td class="col2"><input id="input3" placeholder="title"></td>
+            <td class="col3"><input id="input4" value="in progress"></td>
+        </tr>
+        <tr class="text_row_first">
+            <td colspan="3"><textarea id="input5" placeholder="Your message"></textarea></td>
+        </tr>
+        <tr>
+            <td class="col1 cursor" onclick="ChangeTheme()">Сменить тему</td>
+            <td class="col1"><a href="/mini_db.json" download>Скачать таблицу</a> // Загрузить таблицу <input name="userfile" type="file" onchange="ReadUserFile(this)"></a></td>
+            <td class="col3 shadow cursor" onclick="SendText()">send</td>
+        </tr>
+        <tr style="height: 30px;"></tr>
+        <tr class="sorting">
+            <td class="col1" onclick="SortingTable('time')">time</td>
+            <td class="col2" onclick="SortingTable('title')">title</td>
+            <td class="col3" onclick="SortingTable('status')">status</td>
+        </tr>
+
+
+    </table>
+</div>
+
+<script src="js.js"></script>
+</body>
+</html>
